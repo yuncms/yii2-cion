@@ -1,12 +1,13 @@
-# yii2-article
-适用于Yii2的article
+# yii2-coin
 
-[![Latest Stable Version](https://poser.pugx.org/yuncms/yii2-article/v/stable.png)](https://packagist.org/packages/yuncms/yii2-article)
-[![Total Downloads](https://poser.pugx.org/yuncms/yii2-article/downloads.png)](https://packagist.org/packages/yuncms/yii2-article)
-[![Reference Status](https://www.versioneye.com/php/yuncms:yii2-article/reference_badge.svg)](https://www.versioneye.com/php/yuncms:yii2-article/references)
-[![Build Status](https://img.shields.io/travis/yiisoft/yii2-article.svg)](http://travis-ci.org/yuncms/yii2-article)
-[![Dependency Status](https://www.versioneye.com/php/yuncms:yii2-article/dev-master/badge.png)](https://www.versioneye.com/php/yuncms:yii2-article/dev-master)
-[![License](https://poser.pugx.org/yuncms/yii2-article/license.svg)](https://packagist.org/packages/yuncms/yii2-article)
+适用于Yii2的金币模块
+
+[![Latest Stable Version](https://poser.pugx.org/yuncms/yii2-coin/v/stable.png)](https://packagist.org/packages/yuncms/yii2-coin)
+[![Total Downloads](https://poser.pugx.org/yuncms/yii2-coin/downloads.png)](https://packagist.org/packages/yuncms/yii2-coin)
+[![Reference Status](https://www.versioneye.com/php/yuncms:yii2-coin/reference_badge.svg)](https://www.versioneye.com/php/yuncms:yii2-coin/references)
+[![Build Status](https://img.shields.io/travis/yiisoft/yii2-coin.svg)](http://travis-ci.org/yuncms/yii2-coin)
+[![Dependency Status](https://www.versioneye.com/php/yuncms:yii2-coin/dev-master/badge.png)](https://www.versioneye.com/php/yuncms:yii2-coin/dev-master)
+[![License](https://poser.pugx.org/yuncms/yii2-coin/license.svg)](https://packagist.org/packages/yuncms/yii2-coin)
 
 ## Installation
 
@@ -15,13 +16,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-$ composer require yuncms/yii2-article
+$ composer require yuncms/yii2-coin
 ```
 
 or add
 
 ```
-"yuncms/yii2-article": "~2.0.0"
+"yuncms/yii2-coin": "~1.0.0"
 ```
 
 to the `require` section of your `composer.json` file.
@@ -30,24 +31,9 @@ to the `require` section of your `composer.json` file.
 
 前台模块
 
-yuncms\article\frontend\Module
-
-后台模块
-
-yuncms\article\backend\Module
-
-###Url规则
-````
-    'articles/<page:\d+>' => 'article/article/index',
-    'articles' => 'article/article/index',
-    'article/create' => 'article/article/create',
-    'article/tag' => 'article/article/tag',
-    'article/<key:[\w+]+>' => 'article/article/view',
-````
-
-
+yuncms\coin\frontend\Module
 
 ## License
 
-This is released under the MIT License. See the bundled [LICENSE.md](LICENSE.md)
+This is released under the MIT License. See the bundled [LICENSE](LICENSE.md)
 for details.

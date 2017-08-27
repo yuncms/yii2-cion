@@ -5,7 +5,7 @@
     "coin","yii2","yii2-module"
   ],
   "type": "yii2-extension",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "authors": [
     {
       "name": "Xu TL",
@@ -15,9 +15,6 @@
   "require": {
     "yiisoft/yii2": "~2.0.6",
     "yuncms/yii2-user": "~2.0"
-  },
-  "suggest": {
-    "yuncms/yii2-payment": "Allows you to use payment"
   },
   "autoload": {
     "files": [
