@@ -5,12 +5,12 @@ namespace yuncms\coin\models;
 use Yii;
 use yii\db\ActiveRecord;
 use yii\db\BaseActiveRecord;
-use yuncms\user\ModuleTrait;
+use yuncms\user\models\User;
 use yuncms\payment\models\Payment;
 use yuncms\payment\OrderInterface;
 
 /**
- * This is the model class for table "{{%user_coin_recharge}}".
+ * This is the model class for table "{{%coin_recharge}}".
  *
  * @property int $id
  * @property string $payment_id 支付号
@@ -26,7 +26,6 @@ use yuncms\payment\OrderInterface;
  */
 class Recharge extends ActiveRecord implements OrderInterface
 {
-    use ModuleTrait;
     //交易状态
     const STATE_NOT_PAY = 0;//未支付
     const STATE_SUCCESS = 1;//支付成功

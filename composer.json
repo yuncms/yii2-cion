@@ -2,7 +2,7 @@
   "name": "yuncms/yii2-coin",
   "description": "coin",
   "keywords": [
-    "coin"
+    "coin","yii2","yii2-module"
   ],
   "type": "yii2-extension",
   "license": "BSD-3-Clause",
@@ -14,8 +14,10 @@
   ],
   "require": {
     "yiisoft/yii2": "~2.0.6",
-    "yiisoft/yii2-queue": "~2.0.0",
     "yuncms/yii2-user": "~2.0"
+  },
+  "suggest": {
+    "yuncms/yii2-payment": "Allows you to use payment"
   },
   "autoload": {
     "files": [

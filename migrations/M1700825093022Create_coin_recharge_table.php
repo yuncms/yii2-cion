@@ -27,6 +27,8 @@ class M1700825093022Create_coin_recharge_table extends Migration
             'created_at' => $this->integer()->unsigned()->notNull()->comment('创建时间'),
             'updated_at' => $this->integer()->unsigned()->notNull()->comment('更新时间'),
         ], $tableOptions);
+
+        $this->addForeignKey('{{%coin_recharge_ibfk_1}}', '{{%coin_recharge}}', 'user_id', '{{%user}}', 'id', 'CASCADE', 'RESTRICT');
     }
 
     public function safeDown()

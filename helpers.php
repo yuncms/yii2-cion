@@ -1,29 +1,35 @@
 <?php
 
-if (!function_exists('credit')) {
+if (!function_exists('coin')) {
     /**
-     * 修改用户金币
-     * @param int $user_id 用户id
-     * @param string $action 执行动作：提问、回答、发起文章
-     * @param int $sourceId 源：问题id、回答id、文章id等
-     * @param string $sourceSubject 源主题：问题标题、文章标题等
-     * @param int $credits 经验值
-     * @return bool  操作成功返回true 否则  false
+     * 金币变动
+     * @param int $user_id
+     * @param string $action
+     * @param int $coins 金币数量
+     * @param int $modelId 源ID
+     * @param null $modelSubject 源标题
+     * @return bool
+     * @throws \yii\db\Exception
      */
-    function coin($user_id, $action, $credits = 0, $sourceId = 0, $sourceSubject = null)
+    function coin($user_id, $action, $coins = 0, $modelId = 0, $modelSubject = null)
     {
         $extend = \yuncms\user\models\Extend::findOne($user_id);
         if ($extend) {
             $transaction = \yuncms\user\models\Extend::getDb()->beginTransaction();
             try {
-                /*修改用户账户信息*/
-                $extend->updateCounters(['credits' => $credits]);
-                \yuncms\credit\models\Credit::create([
+                $value = $extend->coins + $coins;
+                if ($coins < 0 && $value < 0) {
+                    return false;
+                }
+                //更新用户钱包
+                $extend->updateAttributes(['coins' => $value]);
+                /*记录详情数据*/
+                \yuncms\coin\models\Coin::create([
                     'user_id' => $user_id,
                     'action' => $action,
-                    'source_id' => $sourceId,
-                    'source_subject' => $sourceSubject,
-                    'credits' => $credits,
+                    'model_id' => $modelId,
+                    'model_subject' => $modelSubject,
+                    'coins' => $coins,
                 ]);
                 $transaction->commit();
                 return true;
