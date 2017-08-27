@@ -4,8 +4,14 @@ namespace yuncms\coin\migrations;
 
 use yii\db\Migration;
 
-class M1700825093022Create_coin_recharge_table extends Migration
+/**
+ * Class M170827044339Create_coin_recharge_table
+ */
+class M170827044339Create_coin_recharge_table extends Migration
 {
+    /**
+     * @inheritdoc
+     */
     public function safeUp()
     {
         $tableOptions = null;
@@ -29,8 +35,12 @@ class M1700825093022Create_coin_recharge_table extends Migration
         ], $tableOptions);
 
         $this->addForeignKey('{{%coin_recharge_ibfk_1}}', '{{%coin_recharge}}', 'user_id', '{{%user}}', 'id', 'CASCADE', 'RESTRICT');
+
     }
 
+    /**
+     * @inheritdoc
+     */
     public function safeDown()
     {
         $this->dropTable('{{%coin_recharge}}');
@@ -45,7 +55,7 @@ class M1700825093022Create_coin_recharge_table extends Migration
 
     public function down()
     {
-        echo "M170607093022Create_user_coin_recharge_table cannot be reverted.\n";
+        echo "M170827044339Create_coin_recharge_table cannot be reverted.\n";
 
         return false;
     }
