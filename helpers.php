@@ -5,7 +5,7 @@ if (!function_exists('coin')) {
      * 金币变动
      * @param int $user_id
      * @param string $action
-     * @param int $coins 金币数量
+     * @param int $coins 金币数量 正数+ 负数-
      * @param int $modelId 源ID
      * @param null $modelSubject 源标题
      * @return bool

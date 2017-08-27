@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'id',
                         'action',
                         'coins',
-                        'source_subject',
+                        'model_subject',
                         'created_at:datetime'
                     ],
                 ]);
