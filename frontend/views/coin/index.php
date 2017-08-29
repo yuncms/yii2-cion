@@ -54,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
 if (Yii::$app->hasModule('payment')):
     $recharge = new Recharge();
     $form = ActiveForm::begin([
-        'action' => \yii\helpers\Url::toRoute(['/user/coin/recharge']),
+        'action' => \yii\helpers\Url::toRoute(['/coin/coin/recharge']),
     ]); ?>
     <?= Html::activeInput('hidden', $recharge, 'currency', ['value' => Yii::$app->language == 'zh-CN' ? 'CNY' : 'USD']) ?>
     <?= Html::activeInput('hidden', $recharge, 'trade_type', ['value' => Payment::TYPE_NATIVE]) ?>

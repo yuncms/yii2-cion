@@ -17,7 +17,7 @@ use yuncms\payment\models\Payment;
 
 /**
  * Class CoinController
- * @package yuncms\user
+ * @package yuncms\coin
  */
 class CoinController extends Controller
 {
@@ -72,7 +72,7 @@ class CoinController extends Controller
                 'trade_type' => Payment::TYPE_NATIVE,
                 'model_id' => $model->id,
                 'model' => get_class($model),
-                'return_url' => Url::to(['/user/coin/index'], true),
+                'return_url' => Url::to(['/coin/coin/index'], true),
             ]);
             if ($payment->save()) {
                 $model->link('payment', $payment);
