@@ -21,7 +21,7 @@
       "helpers.php"
     ],
     "psr-4": {
-      "yuncms\\coin\\": "src",
+      "yuncms\\coin\\": "",
       "yuncms\\jobs\\": "jobs",
       "yuncms\\migrations\\": "migrations"
     }
