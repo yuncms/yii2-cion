@@ -25,6 +25,20 @@
     }
   },
   "extra": {
+    "yuncms": {
+      "name": "coin",
+      "i18n": {
+        "class":"yii\\i18n\\PhpMessageSource",
+        "basePath":"@yuncms/coin/message"
+      },
+      "migrationNamespace": "@yuncms/coin/migrations",
+      "backend": {
+
+      },
+      "frontend": {
+        "class": "yuncms\\coin\\frontend\\Module"
+      }
+    },
     "branch-alias": {
       "dev-master": "1.0-dev"
     }
