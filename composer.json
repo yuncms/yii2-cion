@@ -31,7 +31,7 @@
         "class":"yii\\i18n\\PhpMessageSource",
         "basePath":"@yuncms/coin/message"
       },
-      "migrationNamespace": "@yuncms/coin/migrations",
+      "migrationNamespace": "yuncms/coin/migrations",
       "backend": {
 
       },
