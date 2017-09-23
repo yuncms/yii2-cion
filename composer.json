@@ -2,7 +2,9 @@
   "name": "yuncms/yii2-coin",
   "description": "coin",
   "keywords": [
-    "coin","yii2","yii2-module"
+    "coin",
+    "yii2",
+    "yii2-module"
   ],
   "type": "yii2-extension",
   "license": "MIT",
@@ -28,12 +30,12 @@
     "yuncms": {
       "name": "coin",
       "i18n": {
-        "class":"yii\\i18n\\PhpMessageSource",
-        "basePath":"@yuncms/coin/message"
+        "class": "yii\\i18n\\PhpMessageSource",
+        "sourceLanguage": "en-US",
+        "basePath": "@yuncms/coin/message"
       },
       "migrationNamespace": "yuncms\\coin\\migrations",
       "backend": {
-
       },
       "frontend": {
         "class": "yuncms\\coin\\frontend\\Module"
