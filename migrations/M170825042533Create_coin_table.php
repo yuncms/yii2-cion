@@ -22,7 +22,7 @@ class M170825042533Create_coin_table extends Migration
 
         $this->createTable('{{%coins}}', [
             'id' => $this->primaryKey(),
-            'user_id' => $this->integer()->notNull(),
+            'user_id' => $this->integer()->unsigned()->notNull(),
             'action' => $this->string(100)->notNull(),
             'model_id' => $this->integer(),
             'model_subject' => $this->string(),

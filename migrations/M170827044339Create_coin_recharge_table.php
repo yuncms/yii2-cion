@@ -23,7 +23,7 @@ class M170827044339Create_coin_recharge_table extends Migration
         $this->createTable('{{%coin_recharge}}', [
             'id' => $this->primaryKey(),
             'payment_id' => $this->string()->comment('支付号'),
-            'user_id' => $this->integer()->comment('用户ID'),
+            'user_id' => $this->integer()->unsigned()->comment('用户ID'),
             'name' => $this->integer(),
             'gateway' => $this->string(50)->notNull()->comment('支付网关'),
             'currency' => $this->string(20)->notNull()->comment('支付币种'),
